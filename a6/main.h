@@ -12,7 +12,7 @@ class IntValue : public Inserter<IntValue>
 		int value();
 	
 	private:
-		std::ostream &insertInto(std::ostream &out);
+		virtual std::ostream &insertInto(std::ostream &out);
 	
 	friend Inserter;
 };
@@ -35,10 +35,10 @@ class LabelledInt : public IntValue
 	std::string d_label;
 	
 	public:
-		labelledInt(int someInt, std::string label);
+		LabelledInt(int someInt, std::string label);
 	
 	private:
-		std::ostream &insertInto(std::ostream &out);
+		std::ostream &insertInto(std::ostream &out) override;
 	
 	friend Inserter;
 };
