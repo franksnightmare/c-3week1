@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+
+\usepackage{times}
+\usepackage[english]{babel}
+
+% -----------------------------------------------
+% especially use this for you code
+% -----------------------------------------------
+
+\usepackage{courier}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{graphicx}
+
+\definecolor{Gray}{gray}{0.95}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{language=C++,
+	basicstyle = \normalsize\ttfamily,   % the size and fonts that are used
+	tabsize = 2,                    % sets default tabsize
+	breaklines = true,              % sets automatic line breaking
+	keywordstyle=\color{blue}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	commentstyle=\color{mygreen}\ttfamily,
+	numbers=left,
+	keepspaces=true,
+	showspaces=false,
+	showstringspaces=false,
+}
+
+\begin{document}
+
+\title{Programming in C/C++ \\
+       Exercises set one: class templates
+}
+\date{\today}
+\author{Christiaan Steenkist \\
+Jaime Betancor Valado \\
+Remco Bos \\
+}
+
+\maketitle
+\section*{Exercise 3, custom back inserter}
+In this exercise we make a custom class work with the \texttt{back\_inserter} iterator so we can use the \texttt{copy} generic algorithm.
+
+\subsection*{Code listings}
+\lstinputlisting[caption = data.ih]{src/a3/data.ih}
+\lstinputlisting[caption = data.h]{src/a3/data.h}
+\lstinputlisting[caption = main.cc]{src/a3/main.cc}
+\lstinputlisting[caption = pushback.cc]{src/a3/pushback.cc}
+
+\section*{Exercise 5, static polymorphism}
+We made a static polymorphic class that prints things!
+
+\subsection*{Code listings}
+\lstinputlisting[caption = inserter.ih]{src/a5/inserter.ih}
+\lstinputlisting[caption = inserter.h]{src/a5/inserter.h}
+\lstinputlisting[caption = main.ih]{src/a5/main.ih}
+\lstinputlisting[caption = main.h]{src/a5/main.h}
+\lstinputlisting[caption = main.cc]{src/a5/main.cc}
+
+\subsubsection*{IntValue}
+\lstinputlisting[caption = intconstructor.cc]{src/a5/intconstructor.cc}
+\lstinputlisting[caption = intinserter.cc]{src/a5/intinserter.cc}
+
+\subsubsection*{DoubleValue}
+\lstinputlisting[caption = doubleconstructor.cc]{src/a5/doubleconstructor.cc}
+\lstinputlisting[caption = doubleinserter.cc]{src/a5/doubleinserter.cc}
+
+\section*{Exercise 6, static polymorphism contd.}
+Now with more inheritence?
+
+\subsection*{Code listings}
+\lstinputlisting[caption = main.ih]{src/a6/main.ih}
+\lstinputlisting[caption = main.h]{src/a6/main.h}
+\lstinputlisting[caption = main.cc]{src/a6/main.cc}
+
+\subsubsection*{LabelledInt}
+\lstinputlisting[caption = labelconstructor.cc]{src/a6/labelconstructor.cc}
+\lstinputlisting[caption = labelinserter.cc]{src/a6/labelinserter.cc}
+
+\end{document}

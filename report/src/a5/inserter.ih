@@ -1,0 +1,3 @@
+#include "inserter.h"
+
+using namespace std;
