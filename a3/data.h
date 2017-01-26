@@ -14,6 +14,7 @@ class Data
 	public:
 		typedef std::string value_type;
 		void push_back(std::string const &str);
+		void vecOutput();
 };
 
 #endif
