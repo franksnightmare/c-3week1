@@ -12,7 +12,8 @@ Matrix<Type>::Matrix(IniList iniList)
     {
         if (list.size() != d_nCols)
         {
-            cerr << "Matrix(IniList): varying number of elements in rows\n";
+            cerr << "Matrix(IniList): varying"
+            " number of elements in rows\n";
             exit(1);
         }
         memcpy(ptr, &*list.begin() , list.size() * sizeof(Type));

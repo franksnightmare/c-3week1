@@ -12,9 +12,10 @@ int main()
 {
     Semaphore mx(5);
     
-    mx.wait(test);
-    mx.wait(test);
-    mx.wait(test);
-    mx.wait(test);
-    mx.wait(test);
+    mx.wait(test, 5);
+    mx.wait(test, 5);
+    mx.wait(test, 5);
+    mx.wait(test, 5);
+    mx.wait(test, 5);
+    
 }

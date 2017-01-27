@@ -17,23 +17,23 @@ class Semaphore
     template <typename Function, typename ...Params>
 	bool wait(Function fun, Params &&...params)
     {
-	fun(std::forward<Params>(params)...);
-	std::unique_lock<std::mutex> lk(d_mutex);
-		
-	while (d_nAvailable == 0)
-	    d_condition.wait(lk);   
-		
-	if (d_nAvailable == 1 && not fun(d_nAvailable))
-	    return false;
-		
-	--d_nAvailable;
-	
-	return true;
+        fun(std::forward<Params>(params)...);
+        std::unique_lock<std::mutex> lk(d_mutex);
+
+        while (d_nAvailable == 0)
+            d_condition.wait(lk);
+
+        if (d_nAvailable == 1 &&
+            not fun(d_nAvailable))
+            return false;
+
+        --d_nAvailable;
+
+        return true;
     };
-	
-    void notify_all();  
+
+    void notify_all();
     size_t size() const;
 };
 
 #endif
-
