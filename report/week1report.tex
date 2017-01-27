@@ -44,6 +44,40 @@ Remco Bos \\
 }
 
 \maketitle
+\section*{Exercise 1, new matrix}
+In this exercise we changed the matrix class to work with templates.
+Keep in mind that this would make the header file humongous as the entirety of the template class needs to be in the header.
+Since we had all the functions in seperate files anyways we just kind of left them there and only included the destructor.
+Just imagine all the functions as being place in the header file as the destructor is with no seperate declaration and definition.
+
+\subsection*{Code listings}
+\lstinputlisting[caption = matrix.ih]{src/a1/matrix.ih}
+\lstinputlisting[caption = matrix.h]{src/a1/matrix.h}
+\lstinputlisting[caption = main.cc]{src/a1/main.cc}
+
+\subsubsection*{matrix files}
+\lstinputlisting[caption = matrix1.cc]{src/a1/matrix1.cc}
+\lstinputlisting[caption = matrix2.cc]{src/a1/matrix2.cc}
+\lstinputlisting[caption = matrix3.cc]{src/a1/matrix3.cc}
+\lstinputlisting[caption = matrix4.cc]{src/a1/matrix4.cc}
+
+\lstinputlisting[caption = add.cc]{src/a1/add.cc}
+\lstinputlisting[caption = operatoradd1.cc]{src/a1/operatoradd1.cc}
+\lstinputlisting[caption = operatoradd2.cc]{src/a1/operatoradd2.cc}
+\lstinputlisting[caption = operatoraddis1.cc]{src/a1/operatoraddis1.cc}
+\lstinputlisting[caption = operatoraddis2.cc]{src/a1/operatoraddis2.cc}
+\lstinputlisting[caption = operatorassign1.cc]{src/a1/operatorassign1.cc}
+\lstinputlisting[caption = operatorassign2.cc]{src/a1/operatorassign2.cc}
+\lstinputlisting[caption = operatorequal.cc]{src/a1/operatorequal.cc}
+\lstinputlisting[caption = operatorfun1.cc]{src/a1/operatorfun1.cc}
+\lstinputlisting[caption = operatorfun2.cc]{src/a1/operatorfun2.cc}
+
+\subsubsection*{proxy files}
+\lstinputlisting[caption = proxy1.cc]{src/a1/proxy1.cc}
+\lstinputlisting[caption = proxyextractcols.cc]{src/a1/proxyextractcols.cc}
+\lstinputlisting[caption = proxyextractfrom.cc]{src/a1/proxyextractfrom.cc}
+\lstinputlisting[caption = proxyextractrows.cc]{src/a1/proxyextractrows.cc}
+
 \section*{Exercise 3, custom back inserter}
 In this exercise we make a custom class work with the \texttt{back\_inserter} iterator so we can use the \texttt{copy} generic algorithm.
 
